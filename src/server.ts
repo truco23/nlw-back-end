@@ -1,11 +1,14 @@
 import express from 'express';
 
+import mainRoutes from './routers/main.routes';
+import usersRoutes from './routers/users.routes';
+
 const app = express();
+const port = process.env.port || 8080;
 
-app.get('/', (req, res) => {
-    res.json({ success: 'Bem-vindo a NWL' })
-})
+app.use(mainRoutes);
+app.use(usersRoutes)
 
-app.listen(8080, () => {
-    console.log('Bem-vindo a NLW :)');
+app.listen(port, () => {
+    console.log(`Servidor local rodando em http://localhost:${port}`);
 })

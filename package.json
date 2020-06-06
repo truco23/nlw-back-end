@@ -6,6 +6,8 @@
   "scripts": {
     "c": "git-cz",
     "json-server": "json-server --watch db.json",
+    "migrations": "knex --knexfile knexfile.ts migrate:latest",
+    "seeds": "knex --knexfile knexfile.ts seed:run",
     "dev": "ts-node-dev src/server.ts"
   },
   "keywords": [],
@@ -27,6 +29,8 @@
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "json-server": "^0.16.1",
+    "knex": "^0.21.1",
+    "sqlite3": "^4.2.0",
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.9.3"

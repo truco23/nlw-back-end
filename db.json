@@ -2,18 +2,31 @@
     "users": [
         {
             "id": 1,
-            "title": "json-server",
-            "author": "typicode"
+            "name": "user"
         }
     ],
-    "comments": [
+    "potins": [
         {
             "id": 1,
-            "body": "some comment",
-            "postId": 1
+            "image": "image",
+            "name": "name",
+            "email": "email",
+            "whatshapp": "111111111",
+            "latitude": "2222222222",
+            "longitude": "3333333333",
+            "city": "city",
+            "uf": "uf"
         }
     ],
-    "profile": {
-        "name": "typicode"
-    }
+    "item": {
+        "id": 1,
+        "title": "title",
+        "image": "image"
+    },
+    "pointItems": [
+        {
+            "porintId": 1,
+            "itemId": 1
+        }
+    ]
 }

@@ -1,10 +1,9 @@
-import express from 'express';
+import MainController from '../controllers/MainController';
+import InstanceRouterHelpers from '../helpers/InstanceRouterHelpers';
 
-import MainController from '../controllers/main.controller';
-
-const mainRoutes = express.Router();
 const mainController = new MainController();
+const mainRoutes = InstanceRouterHelpers.api;
 
 mainRoutes.get('/', mainController.get);
 
-export default mainRoutes;
+export default mainRoutes

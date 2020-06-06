@@ -1,8 +1,8 @@
-import express from 'express';
-import UserController from '../controllers/users.controller';
+import UserController from '../controllers/UsersController';
+import InstacenRouterHelpers from '../helpers/InstanceRouterHelpers';
 
-const usersRoutes = express.Router();
 const userController = new UserController();
+const usersRoutes = InstacenRouterHelpers.api;
 
 usersRoutes.get('/users', userController.getUsers);
 

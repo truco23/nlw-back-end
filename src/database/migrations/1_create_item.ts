@@ -1,9 +1,8 @@
 import Knex from 'knex'
-
-const tableName = 'item';
+import { variables } from '../../helpers/variables';
 
 export const up = async (knex: Knex) => {
-  return knex.schema.createTable(tableName, table => {
+  return knex.schema.createTable(variables.tableNameItem, table => {
     table.increments('id').primary();
     table.string('title').notNullable();
     table.string('image').notNullable();
@@ -11,5 +10,5 @@ export const up = async (knex: Knex) => {
 };
 
 export const down = async (knex: Knex) => {
-  return knex.schema.dropTable(tableName)
+  return knex.schema.dropTable(variables.tableNameItem)
 };

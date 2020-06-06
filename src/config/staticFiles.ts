@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
+import { variables } from '../helpers/variables';
 
-export const urlUpload = '/uploads';
-export const staticConfigUpload = express.static(path.resolve(__dirname, '..', '..', 'uploads'))
+export const staticConfigUpload = express.static(path.resolve(__dirname, '..', '..', `${variables.urlUpload}`))
 
 

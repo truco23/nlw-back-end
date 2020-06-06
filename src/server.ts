@@ -2,15 +2,16 @@ import express from 'express';
 
 import mainRoutes from './routers/main.routes';
 import usersRoutes from './routers/users.routes';
-import { urlUpload, staticConfigUpload } from './config/staticFiles';
+import { staticConfigUpload } from './config/staticFiles';
+import { variables } from './helpers/variables';
 
 const app = express();
-const port = process.env.port || 8080;
+const port = process.env.port || variables.port;
 
 app.use(mainRoutes);
 app.use(usersRoutes);
-app.use(urlUpload, staticConfigUpload)
+app.use(`/${variables.urlUpload}`, staticConfigUpload)
 
 app.listen(port, () => {
-    console.log(`Servidor local rodando em http://localhost:${port}`);
+    console.log(`Servidor local rodando em ${variables.localHost}:${port}`);
 })

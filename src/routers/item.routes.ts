@@ -2,8 +2,8 @@ import UserController from '../controllers/ItemController';
 import InstacenRouterHelpers from '../helpers/InstanceRouterHelpers';
 
 const userController = new UserController();
-const usersRoutes = InstacenRouterHelpers.api;
+const itemRoutes = InstacenRouterHelpers.api;
 
-usersRoutes.get('/items', userController.getItems);
+itemRoutes.get('/items', userController.get);
 
-export default usersRoutes;
+export default itemRoutes;

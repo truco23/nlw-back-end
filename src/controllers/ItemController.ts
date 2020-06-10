@@ -10,7 +10,7 @@ interface Item {
 
 class ItemController {
 
-  async getItems(req: Request, res: Response) {
+  async get(req: Request, res: Response) {
 
     const items = await queryAll(variables.tableNameItem)
     const serialize = items.map((item: Item) => {

@@ -1,13 +1,13 @@
-import knex from 'knex';
-import path from 'path';
-import { variables } from '../helpers/variables';
+import knex from "knex";
+import path from "path";
+import { variables } from "../helpers/variables";
 
 const connection = knex({
   client: `${variables.sqlite3}`,
   connection: {
-    filename: path.resolve(__dirname, 'database.sqlite')
+    filename: path.resolve(__dirname, "database.sqlite"),
   },
-  useNullAsDefault: true
+  useNullAsDefault: true,
 });
 
-export default connection
+export default connection;
